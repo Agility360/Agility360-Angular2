@@ -1,0 +1,30 @@
+<h2>Terms of Use</h2>
+
+<div *ngIf="posts">
+    <div *ngFor="let post of posts">
+      <div>
+        <div class="card-title-block">
+          <div>
+            <div>
+              <img src="assets/img/agility360-logo-transparent-512x512.png" />
+            </div>
+            <p>Updated: {{ post.date.toString().replace("None", "") | date:"MMM dd, yyyy" }}</p>
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <img src="{{ post.featured_media_url }}">
+            <p class="wordpress" text-wrap [innerHtml]="post.content.rendered | safeHtml"></p>
+          </div>
+        </div>
+
+      </div>
+
+    </div> <!-- *ngFor="let post of posts" -->
+  </div> <!-- *ngIf="posts" -->
+
+  <div *ngIf="errMess">
+    <h2>Error</h2>
+    <h4>{{ errMess }}</h4>
+  </div>

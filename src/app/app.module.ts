@@ -6,20 +6,42 @@ import { AppComponent } from './app.component';
 import { AppNavbarComponent } from './app-navbar/app-navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './/app-routing.module';
-import { TosComponent } from './tos/tos.component';
+
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule, XHRBackend, RequestOptions } from '@angular/http';
+import { HttpService } from './services/http.service';
+
+import { TosComponent } from './pages/tos/tos.component';
+import { WordpressService } from './providers/wordpress.service';
+import { apiURL, cmsURL } from './shared/constants';
+import { ProcessHttpmsgProvider } from './providers/process-httpmsg';
+import { SafeHtmlPipe } from "./shared/pipe.safehtml";
+
+export function httpFactory(backend: XHRBackend, defaultOptions: RequestOptions) {
+  return new HttpService(backend, defaultOptions);
+}
+
 
 @NgModule({
   declarations: [
     AppComponent,
     AppNavbarComponent,
+    SafeHtmlPipe,
     TosComponent
   ],
   imports: [
     BrowserModule,
     NgbModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule, HttpModule
   ],
-  providers: [],
+  providers: [
+    WordpressService,
+    { provide: HttpService, useFactory: httpFactory, deps: [XHRBackend, RequestOptions] },
+    { provide: 'apiURL', useValue: apiURL },
+    { provide: 'CMSURL', useValue: cmsURL },
+    ProcessHttpmsgProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
