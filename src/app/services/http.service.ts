@@ -9,10 +9,6 @@
 import { Injectable } from '@angular/core';
 import { Http, XHRBackend, Request, RequestOptions, RequestOptionsArgs, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
-
-/*
-import { LoginPage } from '../pages/login/login';
-*/
 import 'rxjs/Rx';
 import { DEBUG_MODE } from '../shared/constants';
 

@@ -16,6 +16,7 @@ import { WordpressService } from './providers/wordpress.service';
 import { apiURL, cmsURL } from './shared/constants';
 import { ProcessHttpmsgProvider } from './providers/process-httpmsg';
 import { SafeHtmlPipe } from "./shared/pipe.safehtml";
+import { HomeComponent } from './pages/home/home.component';
 
 export function httpFactory(backend: XHRBackend, defaultOptions: RequestOptions) {
   return new HttpService(backend, defaultOptions);
@@ -27,7 +28,8 @@ export function httpFactory(backend: XHRBackend, defaultOptions: RequestOptions)
     AppComponent,
     AppNavbarComponent,
     SafeHtmlPipe,
-    TosComponent
+    TosComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

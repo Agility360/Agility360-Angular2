@@ -1,5 +1,7 @@
 # Agility360Angular
 
+page generator shortcut: ng generate component pages/{PAGE NAME} --module app.module.ts
+
 ## Build
 ```
 npm install -g @angular/cli@latest
