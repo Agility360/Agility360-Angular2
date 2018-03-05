@@ -17,7 +17,6 @@ import { cmsURL, DEBUG_MODE, HTTP_RETRIES } from '../shared/constants';
 import { ProcessHttpmsgProvider } from './process-httpmsg';
 
 
-
 @Injectable()
 export class WordpressService {
 
