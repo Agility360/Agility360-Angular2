@@ -1,0 +1,33 @@
+.agility-logo {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.body-container {
+  margin-top: 75px;
+}
+
+.body-left {
+  min-height: 80vh;
+}
+
+.content-box {
+  min-height: 350px;
+}
+
+.red-border {
+  border: 1px dashed red;
+}
+
+.post {
+  min-height: 150px;
+
+}
+
+.post-left {
+  min-height: 100px;
+}
+
+.post-right {
+  min-height: 100px;
+}

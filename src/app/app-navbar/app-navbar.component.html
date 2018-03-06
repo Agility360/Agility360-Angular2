@@ -1,13 +1,27 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="#">Navbar</a>
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="/"><img src="../../assets/img/agility360-logo-transparent-512x512.png" class="img-rounded" alt="Agility 360 Logo" width="45px"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <div class="collapse navbar-collapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/tos">Profile </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Jobs </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Recruit </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Connect </a>
+        </li>
+
+        <!--
         <li class="nav-item dropdown" ngbDropdown>
           <a class="nav-link dropdown-toggle" id="dropdown01" ngbDropdownToggle>Category</a>
           <div class="dropdown-menu" aria-labelledby="dropdown01" ngbDropdownMenu>
@@ -16,16 +30,17 @@
             <a class="dropdown-item" href="https://blog.angular.io/">Angular Blog</a>
           </div>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/tos">Terms of Service</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
+      -->
       </ul>
+      <h6 style="text-align: left; color: red;"><-- Click "Profile"</h6>
       <form class="form-inline my-2 my-lg-0">
+        <span class="icon-spans oi oi-envelope-closed" title="icon envelope" aria-hidden="true"> </span>
+        <span class="icon-spans oi oi-bell" title="icon bell" aria-hidden="true"> </span>
+        <img src="../../assets/img/Lawrence1.jpg" class="img-rounded" alt="Lawrence McDaniel" width="45px">
+        <!--
         <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      -->
       </form>
     </div>
   </nav>
