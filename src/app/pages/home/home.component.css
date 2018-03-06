@@ -26,6 +26,9 @@
 
 .post-left {
   min-height: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .post-right {
